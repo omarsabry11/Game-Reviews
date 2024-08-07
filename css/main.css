@@ -1,0 +1,239 @@
+:root
+{
+   --heading-font : "Nerko One", cursive;
+   --content-font: "Comfortaa", sans-serif;
+   --main-transition:0.5s;
+}
+body
+{
+    background-color: #272B30;
+}
+
+.heading-img
+{
+    background-image: url(../imgs/wraper.png);
+    background-position: center center;
+    background-size: cover;
+    height: 14rem;
+} 
+*
+{
+    font-family: var(--content-font);/
+    
+}
+h1
+{
+    font-family: var(--heading-font);
+    font-weight: 500;
+}
+
+.logo img
+{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+nav
+{
+    background-color: #3A497B;
+    top: 1.5rem !important;
+    z-index: 9999;
+
+}
+
+nav i
+{
+    cursor: pointer;
+}
+
+nav ul li a
+{
+    font-size: 0.75rem;
+    text-decoration: none;
+    color: white;
+}
+section .title span.free
+{
+    background-color: #4A6792;
+    font-size: 0.75rem;
+    font-weight: bold;
+    transition: var(--main-transition);
+    
+}
+section .box:hover span.free
+{
+    background-color: #196DE7;
+
+}
+
+section  h3
+{
+    color:#919395 ;
+    font-size: 0.88rem;
+    height: 7rem;
+    text-wrap: wrap;
+}
+
+section h4
+{
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: white;
+    background-color: #32383E;
+}
+section .box
+{
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+section .box .inner
+{
+    border:1px solid #202328 !important;
+}
+
+
+
+section .box:hover
+{
+    transform: scale(1.03);
+}
+
+section .box img
+{
+    filter: grayscale(1);
+    transition: var(--main-transition);
+
+}
+section .box:hover img
+{
+
+    filter: grayscale(0);
+
+}
+
+section .pc
+{
+    padding-top: 0.5rem;
+    position: relative;
+}
+section .pc::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    background-color: #202328;
+    width: calc(100% + 2rem);
+    height: 1px;
+
+
+}
+
+.active
+{
+    color: #0099CC;
+}
+
+@media(min-width:992px)
+{
+    nav i
+    {
+        display: none !important;
+    }
+   
+   
+}
+@media(max-width:991px)
+{
+    nav ul
+    {
+      
+        flex-direction:column;
+        position: absolute;
+        left: 0;
+        top: calc(100%);
+        background-color: #3A497B;
+        width: 100%;
+        padding-top: 10px;
+        
+
+    }
+    nav ul li
+    {
+        padding: 0.5rem 1.5rem;
+
+    }
+
+    
+}
+
+
+.details .content .text h4 span
+{
+    background-color: #0DCAF0;
+    padding: 0.3rem 0.3rem;
+    border-radius: 0.5rem;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.details .content #dDesc
+{
+    font-size: 0.9rem;
+}
+.details i
+{
+    cursor: pointer;
+}
+.details .content button
+{
+    transition: 0.3s;
+}
+.details .content button:hover
+{
+    background-color: #FFC107;
+}
+
+#loader
+{
+    background-color: #272B30;
+    z-index: 9999;
+}
+
+
+.lds-hourglass,
+.lds-hourglass:after {
+  box-sizing: border-box;
+}
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid currentColor;
+  border-color: currentColor transparent currentColor transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
